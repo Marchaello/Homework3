@@ -1,0 +1,27 @@
+from colorama import Fore, Back, init, Style
+#це 1 дз, завдання 2
+
+class Secret:
+    __a = input("Введiть пароль:")
+    b = input("Введіть пароль щоб увійти:")
+    c = False
+    def check(self):
+        if self.b != self.__a:
+            self.b = input("Пароль неправильний! Спробуйте ще раз: ")
+        else:
+            print("Ви успішно увійшли")
+    def correct(self):
+        if self.b == self.__a:
+            self.c = True
+password = Secret()
+while password.c != True:
+    password.check()
+
+#це 2 дз з colorama
+init(autoreset = True) #повертає базовий текст після кожної строки
+print("Звичайний текст")
+print(Fore.BLUE + "Змінює колір тексту")
+print(Back.WHITE + Fore.BLACK + "Змінює колір фону")
+print(Fore.WHITE + Style.DIM + "Робить прозорість")
+print(Fore.BLUE + Style.BRIGHT + "Робить текст яскравим")
+# начебто все
